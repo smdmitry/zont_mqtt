@@ -273,7 +273,7 @@ def set_guard(device: Device, guard_zone: GuardZone, enable: bool) -> Response:
 
 
 def is_correct_temperature(
-        temp: str, val_min: int = 5, val_max: int = 35
+        temp: str, val_min: int = 5, val_max: int = 80
 ) -> bool:
     """Проверяет значение температуры на корректность"""
 
@@ -297,14 +297,14 @@ def get_min_max_values_temp(circuit_name: str) -> tuple[int, int]:
      по имени контура отопления.
     :return: (val_min, val_max)
     """
-    val_min, val_max = 5, 35
+    val_min, val_max = 5, 80
     circuit_name = circuit_name.lower().strip()
     matches_gvs = ('гвс', 'горяч',)
     matches_floor = ('пол', 'тёплый',)
     if any([x in circuit_name for x in matches_gvs]):
-        val_min, val_max = 5, 75
+        val_min, val_max = 5, 80
     elif any([x in circuit_name for x in matches_floor]):
-        val_min, val_max = 15, 50
+        val_min, val_max = 15, 80
 
     return val_min, val_max
 
