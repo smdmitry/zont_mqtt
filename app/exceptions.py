@@ -1,5 +1,5 @@
 class RequestAPIZONTError(Exception):
-    """Ошибка запроса к сервису zont-online.ru/api"""
+    """Ошибка запроса к сервису zont.online/api"""
     pass
 
 

@@ -30,7 +30,7 @@ control_names = ControlName(
 
 def get_data_zont() -> str:
     """
-    Делаем запрос к API ZONT https://lk.zont-online.ru/api
+    Делаем запрос к API ZONT https://my.zont.online/api
     :return:
     Возвращает строку ответа от API.
     """
